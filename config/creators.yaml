@@ -1,0 +1,50 @@
+# Per-creator settings for clipper.
+#
+# Every creator inherits `defaults`; anything set under a creator overrides it.
+# The creator key must match the folder name in input/<creator>/.
+
+defaults:
+  whisper:
+    model: small          # tiny | base | small | medium | large-v3 (bigger = slower, more accurate)
+    device: auto          # auto | cpu | cuda
+    compute_type: default # default | int8 | float16 ...
+    language: null        # e.g. "en"; null = auto-detect
+
+  claude:
+    model: claude-opus-5-5
+    effort: medium        # low | medium | high
+
+  clips:
+    count: 5              # how many clips to cut per video
+    min_seconds: 20
+    max_seconds: 60
+
+  captions:
+    font: Arial           # any font installed on your machine (or dropped into fonts/)
+    font_size: 88
+    bold: true
+    uppercase: true
+    words_per_line: 3     # words shown at once; the spoken word is highlighted
+    primary_color: "#FFFFFF"
+    highlight_color: "#FFE600"
+    outline_color: "#000000"
+    outline: 6
+    shadow: 2
+    position: 0.70        # vertical position of the caption line, 0 = top, 1 = bottom
+
+  video:
+    width: 1080
+    height: 1920
+    crf: 20               # lower = better quality / bigger files
+    preset: medium
+
+creators:
+  examplecreator:
+    # Optional: a sentence about the channel helps Claude pick better moments.
+    description: "Interviews and talking-head videos about entrepreneurship."
+    clips:
+      count: 5
+      min_seconds: 20
+      max_seconds: 60
+    captions:
+      highlight_color: "#00E5FF"

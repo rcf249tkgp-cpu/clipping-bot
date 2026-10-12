@@ -1,0 +1,5 @@
+anthropic>=1.13
+faster-whisper>=1.2
+opencv-python-headless>=4.9,<5  # 5.x removed the Haar face detector
+python-dotenv>=1.0
+PyYAML>=6.0

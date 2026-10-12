@@ -1,0 +1,13 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+# media and generated data stay on your machine
+input/*
+!input/.gitkeep
+output/*
+!output/.gitkeep
+work/
+tracking/*
+!tracking/.gitkeep
